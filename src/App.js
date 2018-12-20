@@ -1,59 +1,60 @@
-import React, { Component } from 'react';
-import * as eva from 'eva-icons';
+import React, { Component } from "react";
+import * as eva from "eva-icons";
 
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
+
+import Card from "./Card/Card";
+import styled from "styled-components";
+
+const Container = styled.div``;
+
+const ANIMATION_TYPES = {
+  ZOOM: "zoom",
+  PULSE: "pulse",
+  SHAKE: "shake",
+  FLIP: "flip"
+};
 
 class App extends Component {
   componentDidMount() {
-    eva.replace();
+    eva.replace({
+      fill: "tomato",
+      width: "24px",
+      height: "24px",
+      animation: {
+        type: "pulse", // zoom, pulse, shake, flip
+        hover: true, // default true
+        infinite: false // default false
+      }
+    });
   }
-  
+
   render() {
     const icons = Object.keys(eva.icons);
-    
+
     return (
       <div className="App">
         <header className="App-header">
-          <p>
-            react-eva-icons
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-            <div style={{
+          <h1 style={{color: 'tomato'}}>
+            {" "}
+            <b>react-eva-icons</b>
+          </h1>
+
+          <div
+            style={{
               padding: 0,
               margin: 0,
-              listStyle: 'none',
-              display: 'flex',
-              flexFlow: 'row wrap',
-              justifyContent: 'space-around',
-            }}>
-            {icons.map( (icon, index) => (
-              <div style={{
-                background: 'tomato',
-                padding: '5px',
-                width: '200px',
-                height: '150px',
-                marginTop: '10px',
-                
-                lineHeight: '150px',
-                color: 'white',
-                fontWeight: 'bold',
-                fontSize: '3em',
-                textAlign: 'center',
-              }}>
-                
-              <i data-eva={icon} key={index} data-eva-fill="#fff"> </i>
-              </div>
+              listStyle: "none",
+              display: "flex",
+              flexFlow: "row wrap",
+              justifyContent: "space-around"
+            }}
+          >
+            {icons.map((icon, index) => (
+              <Card icon={<i data-eva={icon} key={index} />} name={icon} />
             ))}
-            </div>
-
+          </div>
         </header>
       </div>
     );
