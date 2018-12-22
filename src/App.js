@@ -13,7 +13,8 @@ const ANIMATION_TYPES = {
 
 const Wrapper = styled.div`
   padding: 1em 2em;
-  background-color: green;
+  /* background-color: green; */
+  margin: 1em;
 
   max-width: 100vw;
 `;
@@ -21,22 +22,30 @@ const Wrapper = styled.div`
 const Header = styled.div`
   max-width: 100%;
   margin-bottom: 2em;
-  background-color: salmon;
+  /* background-color: salmon; */
 `;
 
 const Body = styled.div`
   max-width: 100%;
-  background-color: lightgoldenrodyellow;
-  margin: 1em;
-
-  padding: 0;
-  margin: 0;
-  liststyle: none;
-  display: flex;
-  flexflow: row wrap;
-  justifycontent: space-around;
+  /* background-color: lightgoldenrodyellow; */
 `;
 
+const Logo = styled.h2`
+  font-size: 1.25em;
+  color: #263238;
+  color: Turquoise;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+
+const Description = styled.p`
+  font-size: 0.75em;
+  color: #aaa;
+
+  margin: 2em;
+`;
 
 class App extends Component {
   state = {
@@ -49,7 +58,7 @@ class App extends Component {
   }
   componentDidMount() {
     const config = {
-      fill: "tomato",
+      fill: "Turquoise",
       width: "24px",
       height: "24px",
       animation: {
@@ -68,9 +77,14 @@ class App extends Component {
     return (
       <Wrapper>
         <Header> 
-            react-eva-icons
+          <Logo>
+          ⚛❤ react-eva-icons
+          </Logo>
         </Header>
         <Body>
+          <Description>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          </Description>
           <Cards icons={icons} />
         </Body>
       </Wrapper>

@@ -5,12 +5,18 @@ import styled from 'styled-components';
 import Card from "./Card/Card";
 
 const Wrapper = styled.div`
-  padding: 0;
-  margin: 0;
-  liststyle: none;
-  display: flex;
-  flexflow: row wrap;
-  justifycontent: space-around;
+  display: -webkit-flex;
+	display: flex;
+
+	-webkit-justify-content: center;
+	justify-content: center;
+
+	-webkit-flex-wrap: wrap;
+	flex-wrap: wrap;
+	
+  -webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
 `;
 
 const Cards = ({icons}) => {
