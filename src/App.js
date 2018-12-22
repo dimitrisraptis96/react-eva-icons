@@ -1,13 +1,8 @@
-import React, { Component } from "react";
+import React, { Component, Fragment } from "react";
 import * as eva from "eva-icons";
+import styled from 'styled-components';
+import Cards from "./Cards/Cards";
 
-import logo from "./logo.svg";
-import "./App.css";
-
-import Card from "./Card/Card";
-import styled from "styled-components";
-
-const Container = styled.div``;
 
 const ANIMATION_TYPES = {
   ZOOM: "zoom",
@@ -16,47 +11,69 @@ const ANIMATION_TYPES = {
   FLIP: "flip"
 };
 
+const Wrapper = styled.div`
+  padding: 1em 2em;
+  background-color: green;
+
+  max-width: 100vw;
+`;
+
+const Header = styled.div`
+  max-width: 100%;
+  margin-bottom: 2em;
+  background-color: salmon;
+`;
+
+const Body = styled.div`
+  max-width: 100%;
+  background-color: lightgoldenrodyellow;
+  margin: 1em;
+
+  padding: 0;
+  margin: 0;
+  liststyle: none;
+  display: flex;
+  flexflow: row wrap;
+  justifycontent: space-around;
+`;
+
+
 class App extends Component {
+  state = {
+    icons: []
+  }
+
+  componentWillMount() {
+    const icons = Object.keys(eva.icons);
+    this.setState({icons});
+  }
   componentDidMount() {
-    eva.replace({
+    const config = {
       fill: "tomato",
       width: "24px",
       height: "24px",
       animation: {
-        type: "pulse", // zoom, pulse, shake, flip
-        hover: true, // default true
-        infinite: false // default false
+        type: "pulse", 
+        hover: true,
+        infinite: false 
       }
-    });
+    };
+
+    eva.replace(config);
   }
 
   render() {
-    const icons = Object.keys(eva.icons);
+    const {icons} = this.state;
 
     return (
-      <div className="App">
-        <header className="App-header">
-          <h1 style={{color: 'tomato'}}>
-            {" "}
-            <b>react-eva-icons</b>
-          </h1>
-
-          <div
-            style={{
-              padding: 0,
-              margin: 0,
-              listStyle: "none",
-              display: "flex",
-              flexFlow: "row wrap",
-              justifyContent: "space-around"
-            }}
-          >
-            {icons.map((icon, index) => (
-              <Card icon={<i data-eva={icon} key={index} />} name={icon} />
-            ))}
-          </div>
-        </header>
-      </div>
+      <Wrapper>
+        <Header> 
+            react-eva-icons
+        </Header>
+        <Body>
+          <Cards icons={icons} />
+        </Body>
+      </Wrapper>
     );
   }
 }

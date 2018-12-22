@@ -17,10 +17,7 @@ const Wrapper = styled.div`
 }
 `;
 
-const Card = (props) => {
-  const {
-    icon
-  } = props;
+const Card = ({icon}) => {
   
   return (
     <Wrapper>  {icon} </Wrapper>
