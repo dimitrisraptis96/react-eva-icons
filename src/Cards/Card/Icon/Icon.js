@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import styled from 'styled-components';
 
 import * as eva from "eva-icons";
 
@@ -10,6 +11,14 @@ const SIZE = {
   XLARGE: '30px',
 };
 
+
+
+const IconWrapper = styled.div`
+  svg {
+    width: ${p => p.width};
+    height: ${p => p.height};
+  }
+`;
 
 class Icon extends Component {
 
@@ -68,7 +77,7 @@ class Icon extends Component {
       animation,
     };
     
-    
+
     eva.replace(config);
   }
 
@@ -90,14 +99,28 @@ class Icon extends Component {
   render() {
     const {
       name,
+      fill,
+      size,
+      animation,
     } = this.props;
+
+    const dims = this.updateDims(size);
 
     this.setupEvaIcons();
 
     console.log('<Icon> component renders') 
 
     return(
-      <i data-eva={name} />
+      <IconWrapper width={dims + ' !important'} height={dims + ' !important'}>
+        <i 
+          width={dims + ' !important'} height={dims + ' !important'}
+          data-eva={name}
+          data-eva-fill={fill}
+          data-eva-height={dims}
+          data-eva-width={dims}
+          data-eva-animation={animation}
+        />
+      </IconWrapper>
     );
   }
 }
