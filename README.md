@@ -1,4 +1,4 @@
-# :heart:⚛r eact-eva-icons 
+# :heart:⚛ react-eva-icons 
 
 React js components for awesome open source [Eva Icons](https://akveo.github.io/eva-icons/#/) library. :art: 
 
