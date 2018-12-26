@@ -1,9 +1,26 @@
-A simple React JS wrapper of awesome icon library Eva Icons paintbrush
+# :heart:⚛r eact-eva-icons 
 
-# Useful links
+React js components for awesome open source [Eva Icons](https://akveo.github.io/eva-icons/#/) library. :art: 
 
-- [ ] https://github.com/akveo/eva-icons/issues/25ck
+### How to use 
 
-- [ ] https://medium.com/@BrodaNoel/how-to-create-a-react-component-and-publish-it-in-npm-668ad7d363ce
+```javascript
+import Icon from 'react-eva-icons';
 
-- [ ]  http://nicolasgallagher.com/making-svg-icon-libraries-for-react-apps/
+...
+
+render (
+  <Icon 
+    name='activity'
+    size='medium'    // options: 'small', 'medium', 'large', 'xlarge'
+    animation={{
+      type: pulse, 
+      hover: true,
+      infinite: false 
+    }}
+  />
+);
+  
+```
+
+### More useful Info and Demo will be added soon... :v:
