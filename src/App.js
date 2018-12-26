@@ -1,6 +1,11 @@
 import React, { Component } from "react";
 import * as eva from "eva-icons";
 import styled from 'styled-components';
+
+import { Box, Grommet, RadioButton } from "grommet";
+import { grommet } from "grommet/themes";
+import { deepMerge } from "grommet/utils";
+
 import Cards from "./Cards/Cards";
 
 const ANIMATION_TYPES = {
@@ -48,10 +53,31 @@ const Description = styled.p`
   margin: 2em 1em;
 `;
 
+const customTheme = deepMerge(grommet, {
+  radioButton: {
+    gap: "xsmall",
+    size: "18px",
+    hover: {
+      border: {
+        color: "dark-3"
+      }
+    },
+    check: {
+      color: {
+        light: "neutral-1"
+      }
+    },
+    icon: {
+      size: "10px"
+    }
+  }
+});
 
 class App extends Component {
   state = {
-    icons: []
+    icons: [],
+
+    size: 'medium',
   }
 
   componentWillMount() {
@@ -60,14 +86,16 @@ class App extends Component {
   }
 
   render() {
-    const {icons} = this.state;
+    const {
+      icons,
+      size,
+    } = this.state;
 
     const config = {
       fill: "#36f",
-      width: "24px",
-      height: "24px",
+      size,
       animation: {
-        type: "pulse", 
+        type: ANIMATION_TYPES.PULSE, 
         hover: true,
         infinite: false 
       }
@@ -87,6 +115,22 @@ class App extends Component {
             <b> Eva Icons </b>
             in your next awesome React JS application. 
           </Description>
+
+          <Grommet theme={grommet}>
+            <Box align="start">
+              {["small", "medium", "large", "xlarge"].map(label => (
+                <Box key={label} margin={{ vertical: "small" }}>
+                  <RadioButton
+                    name="sizes"
+                    checked={size === label}
+                    label={label}
+                    onChange={() => this.setState({ size: label })}
+                  />
+                </Box>
+              ))}
+            </Box>
+
+          </Grommet>
 
           <Cards icons={icons} config={config}/>
         </Body>

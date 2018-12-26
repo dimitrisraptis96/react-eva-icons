@@ -3,55 +3,98 @@ import PropTypes from 'prop-types';
 
 import * as eva from "eva-icons";
 
+const SIZE = {
+  SMALL: '12px',
+  MEDIUM: '18px',
+  LARGE: '24px',
+  XLARGE: '30px',
+};
+
+
 class Icon extends Component {
 
-  componentDidMount() {
+  constructor(props){
+    super();
     const {
       fill,
-      width,
-      height,
+      animation,
+      name,
+      size,
+    } = props;
+
+    this.state = {
+      animation,
+      size,
+      fill,
+      name,
+    }
+  }
+
+  componentDidMount() {
+    this.setupEvaIcons();
+  }
+
+  // componentDidUpdate(prevProps, prevState) {
+  //   if (prevState.size !== this.state.size) {
+  //     this.setState({size: this.state.size});
+  //   }
+  // }
+  
+  // static getDerivedStateFromProps = (nextProps, prevState) =>{
+  //   if ( nextProps.size !== prevState.size
+  //     || nextProps.fill !== prevState.fill      
+  //     || nextProps.animation !== prevState.animation
+  //     || nextProps.name !== prevState.name
+  //   ){
+  //     this.setupEvaIcons();
+  //   }
+    
+  //   return null;
+  // }
+
+  setupEvaIcons = () => {
+    const {
+      fill,
       animation,
       size,
     } = this.props;
 
-
-    // TODO: move this to componentwillrecieveprops
-    let pxSize;
-    switch (size) {
-      case 'small':
-        pxSize = '12px';
-        break;
-
-      case 'medium':
-        pxSize = '18px';
-        break;
-  
-      case 'large':
-        pxSize = '24px';
-        break;
-
-      case 'xlarge':
-        pxSize = '30px';
-        break;
-
-      default:
-        pxSize = '18px'
-    }
+    const dims = this.updateDims(size);
 
     const config = {
       fill,
-      width: pxSize,
-      height: pxSize,
+      width: dims,
+      height: dims,
       animation,
     };
     
+    
     eva.replace(config);
+  }
+
+  updateDims = (size) => {
+    switch (size) {
+      case 'small':
+        return SIZE.SMALL;
+      case 'medium':
+        return SIZE.MEDIUM;  
+      case 'large':
+        return SIZE.LARGE;
+      case 'xlarge':
+        return SIZE.XLARGE;
+      default:
+        return SIZE.MEDIUM;
+    }
   }
 
   render() {
     const {
       name,
     } = this.props;
+
+    this.setupEvaIcons();
+
+    console.log('<Icon> component renders') 
 
     return(
       <i data-eva={name} />
@@ -60,19 +103,17 @@ class Icon extends Component {
 }
 
 Icon.propTypes = {
-  name: PropTypes.string,
-  fill: PropTypes.string,
-  width: PropTypes.string,
-  height: PropTypes.string,
   animation: PropTypes.object,
+  fill: PropTypes.string,
+  name: PropTypes.string,
+  size: PropTypes.string,
 };
 
 Icon.defaultProps = {
-  name: '',
-  fill: '',
-  width: '',
-  height: '',
   animation: {},
+  fill: '',
+  name: '',
+  size: 'medium',
 };
 
 export default Icon;

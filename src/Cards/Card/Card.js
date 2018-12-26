@@ -24,18 +24,17 @@ const Card = ({
 }) => {
   const {
     fill,
-    width,
-    height,
+    size,
     animation,
   } = config;  
 
   return (
     <Wrapper>
       <Icon
-        name={name}
-        fill={fill}
-        size='medium'
         animation={animation}
+        fill={fill}
+        name={name}
+        size={size}
       />
     </Wrapper>
   );
