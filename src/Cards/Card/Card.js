@@ -1,7 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-
 import styled from 'styled-components';
+
+import Icon from './Icon/Icon';
 
 const Wrapper = styled.div`
   background: white;
@@ -17,11 +18,37 @@ const Wrapper = styled.div`
 }
 `;
 
-const Card = ({icon}) => {
-  
+const Card = ({ 
+  config,
+  name,
+}) => {
+  const {
+    fill,
+    width,
+    height,
+    animation,
+  } = config;  
+
   return (
-    <Wrapper>  {icon} </Wrapper>
+    <Wrapper>
+      <Icon
+        name={name}
+        fill={fill}
+        size='medium'
+        animation={animation}
+      />
+    </Wrapper>
   );
+};
+
+Card.propTypes = {
+  config: PropTypes.object,
+  name: PropTypes.string,
+};
+
+Card.defaultProps = {
+  config: {},
+  name: '',
 };
 
 export default Card;

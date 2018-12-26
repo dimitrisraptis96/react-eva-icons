@@ -8,8 +8,8 @@ const Wrapper = styled.div`
   display: -webkit-flex;
 	display: flex;
 
-	-webkit-justify-content: center;
-	justify-content: center;
+	-webkit-justify-content: space-between;
+	justify-content: space-between;
 
 	-webkit-flex-wrap: wrap;
 	flex-wrap: wrap;
@@ -19,26 +19,32 @@ const Wrapper = styled.div`
 	box-sizing: border-box;
 `;
 
-const Cards = ({icons}) => {
+const Cards = ({
+  config,
+  icons,
+}) => {
+
   return (
     <Wrapper>
-      {icons.map((icon, index) => (
-        <Card 
-          icon={<i data-eva={icon}/>} 
-          name={icon}
-          key={index}
-        />
-      ))}
+      {icons.map((name, index) => (
+          <Card 
+            config={config} 
+            name={name} 
+            key={index}  
+          />
+        ))}
     </Wrapper>
   );
 };
 
 Cards.propTypes = {
   icons: PropTypes.arrayOf(PropTypes.string),
+  config: PropTypes.object,
 };
 
 Cards.defaultProps = {
   icons: [],
+  config: {},
 };
 
 export default Cards;

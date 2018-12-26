@@ -1,8 +1,7 @@
-import React, { Component, Fragment } from "react";
+import React, { Component } from "react";
 import * as eva from "eva-icons";
 import styled from 'styled-components';
 import Cards from "./Cards/Cards";
-
 
 const ANIMATION_TYPES = {
   ZOOM: "zoom",
@@ -12,9 +11,8 @@ const ANIMATION_TYPES = {
 };
 
 const Wrapper = styled.div`
-  padding: 1em 2em;
-  /* background-color: green; */
-  margin: 1em;
+  padding: 2em 4em;
+  background-color: #f4f4f4;
 
   max-width: 100vw;
 `;
@@ -33,7 +31,7 @@ const Body = styled.div`
 const Logo = styled.h2`
   font-size: 1.25em;
   color: #263238;
-  color: Turquoise;
+  color: #36f;
 
   display: flex;
   justify-content: center;
@@ -41,11 +39,15 @@ const Logo = styled.h2`
 `;
 
 const Description = styled.p`
+  font-family: 'Montserrat', sans-serif;
   font-size: 0.75em;
-  color: #aaa;
+  color: #262626;
+  text-orientation: center;
+  max-width: 100%;
 
-  margin: 2em;
+  margin: 2em 1em;
 `;
+
 
 class App extends Component {
   state = {
@@ -56,9 +58,12 @@ class App extends Component {
     const icons = Object.keys(eva.icons);
     this.setState({icons});
   }
-  componentDidMount() {
+
+  render() {
+    const {icons} = this.state;
+
     const config = {
-      fill: "Turquoise",
+      fill: "#36f",
       width: "24px",
       height: "24px",
       animation: {
@@ -67,13 +72,7 @@ class App extends Component {
         infinite: false 
       }
     };
-
-    eva.replace(config);
-  }
-
-  render() {
-    const {icons} = this.state;
-
+    
     return (
       <Wrapper>
         <Header> 
@@ -83,9 +82,13 @@ class App extends Component {
         </Header>
         <Body>
           <Description>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            👌 Pailess usage of
+            {/* <b> <a target="_blank" href='https://akveo.github.io/eva-icons/#/'> Eva Icons. </a> </b> */}
+            <b> Eva Icons </b>
+            in your next awesome React JS application. 
           </Description>
-          <Cards icons={icons} />
+
+          <Cards icons={icons} config={config}/>
         </Body>
       </Wrapper>
     );
