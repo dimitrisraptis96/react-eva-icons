@@ -1,14 +1,14 @@
 {
   "name": "react-eva-icons",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "React js components for awesome Eva Icons",
+  "keywords": ["react", "eva-icons", "icons"],
   "main": "build/index.js",
   "peerDependencies": {
     "react": "^16.6.3"
   },
   "dependencies": {
     "eva-icons": "^1.1.1",
-    "react": "^16.6.3",
     "webpack": "^2.6.1"
   },
   "scripts": {
