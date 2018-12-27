@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import styled from 'styled-components';
 
 import * as eva from "eva-icons";
 
@@ -10,15 +9,6 @@ const SIZE = {
   LARGE: '24px',
   XLARGE: '30px',
 };
-
-
-
-const IconWrapper = styled.div`
-  svg {
-    width: ${p => p.width};
-    height: ${p => p.height};
-  }
-`;
 
 class Icon extends Component {
 
@@ -43,25 +33,7 @@ class Icon extends Component {
     this.setupEvaIcons();
   }
 
-  // componentDidUpdate(prevProps, prevState) {
-  //   if (prevState.size !== this.state.size) {
-  //     this.setState({size: this.state.size});
-  //   }
-  // }
-  
-  // static getDerivedStateFromProps = (nextProps, prevState) =>{
-  //   if ( nextProps.size !== prevState.size
-  //     || nextProps.fill !== prevState.fill      
-  //     || nextProps.animation !== prevState.animation
-  //     || nextProps.name !== prevState.name
-  //   ){
-  //     this.setupEvaIcons();
-  //   }
-    
-  //   return null;
-  // }
-
-  setupEvaIcons = () => {
+  setupEvaIcons() {
     const {
       fill,
       animation,
@@ -81,7 +53,7 @@ class Icon extends Component {
     eva.replace(config);
   }
 
-  updateDims = (size) => {
+  updateDims(size) {
     switch (size) {
       case 'small':
         return SIZE.SMALL;
@@ -108,19 +80,14 @@ class Icon extends Component {
 
     this.setupEvaIcons();
 
-    console.log('<Icon> component renders') 
-
     return(
-      <IconWrapper width={dims + ' !important'} height={dims + ' !important'}>
-        <i 
-          width={dims + ' !important'} height={dims + ' !important'}
-          data-eva={name}
-          data-eva-fill={fill}
-          data-eva-height={dims}
-          data-eva-width={dims}
-          data-eva-animation={animation}
-        />
-      </IconWrapper>
+      <i 
+        data-eva={name}
+        data-eva-fill={fill}
+        data-eva-height={dims}
+        data-eva-width={dims}
+        data-eva-animation={animation}
+      />
     );
   }
 }
