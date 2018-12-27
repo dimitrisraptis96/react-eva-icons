@@ -3,7 +3,13 @@
   "version": "0.0.3",
   "description": "React js components for awesome Eva Icons",
   "keywords": ["react", "eva-icons", "icons"],
+  "homepage": "https://github.com/dimitrisraptis96/react-eva-icons",
+  "license" : "See license on LICENSE.txt",
   "main": "build/index.js",
+  "author": {
+    "name": "Raptis Dimitrios",
+    "email": "dimitrisraptis96@gmail.com"
+  },
   "peerDependencies": {
     "react": "^16.6.3"
   },
@@ -15,10 +21,6 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack --watch",
     "build": "webpack"
-  },
-  "author": {
-    "name": "Raptis Dimitrios",
-    "email": "dimitrisraptis96@gmail.com"
   },
   "devDependencies": {
     "babel-cli": "^6.24.1",
