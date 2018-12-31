@@ -41,16 +41,16 @@ const Usage = (props) => {
       <pre style={{margin: '1em 1em'}}>
         <code className="language-javascript">
         {`
-          import Icon from "react-eva-icons";
-          
+          import Icon from 'react-eva-icons';
+
           ...
 
           render (
             <Icon 
               name="activity"
-              size="medium"    //options: 'small', 'medium', 'large', 'xlarge'
+              size="medium"     // small, medium, large, xlarge
               animation={{
-                type: "pulse", 
+                type: "pulse",  // zoom, pulse, shake, flip
                 hover: true,
                 infinite: false 
               }}
