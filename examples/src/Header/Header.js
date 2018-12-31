@@ -5,7 +5,7 @@ import GithubIcon from "../components/GithubIcon";
 
 const Wrapper = styled.div`
   max-width: 100%;
-  margin-bottom: 2em;
+  /* margin-bottom: 2em; */
 
   display: flex;
   direction: row;
@@ -32,7 +32,7 @@ const Header = props => {
       <Logo>⚛❤ react-eva-icons</Logo>
       
       <a target="_blank" rel="noopener noreferrer" href='https://github.com/dimitrisraptis96/react-eva-icons'>
-        <GithubIcon primaryColor="#36f"/>
+        <GithubIcon primaryColor="#2A2D26"/>
       </a>
 
     </Wrapper>
