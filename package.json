@@ -7,7 +7,7 @@
     "eva-icons",
     "icons"
   ],
-  "homepage": "https://github.com/dimitrisraptis96/react-eva-icons",
+  "homepage": "https://dimitrisraptis96.github.io/react-eva-icons",
   "license": "MIT",
   "main": "dist/index.js",
   "author": {
@@ -23,7 +23,7 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack-dev-server --mode development",
+    "dev": "webpack-dev-server --mode development",
     "transpile": "babel src -d dist --copy-files",
     "prepublishOnly": "npm run transpile",
     "build": "webpack --mode production",
