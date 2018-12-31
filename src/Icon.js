@@ -104,7 +104,7 @@ Icon.propTypes = {
 
 Icon.defaultProps = {
   animation: {},
-  fill: '',
+  fill: '#fff',
   name: '',
   size: 'medium',
 };
