@@ -31,9 +31,9 @@ import Icon from 'react-eva-icons';
 render (
   <Icon 
     name="activity"
-    size="medium"
+    size="medium"     // small, medium, large, xlarge
     animation={{
-      type: "pulse", 
+      type: "pulse",  // zoom, pulse, shake, flip
       hover: true,
       infinite: false 
     }}

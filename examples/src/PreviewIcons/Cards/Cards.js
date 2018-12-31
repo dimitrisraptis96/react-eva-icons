@@ -24,9 +24,6 @@ const Cards = ({
   icons,
 }) => {
 
-  console.log(config);
-  
-
   return (
     <Wrapper>
       {icons.map((name, index) => (

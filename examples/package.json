@@ -2,6 +2,7 @@
   "name": "react-eva-icons",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://dimitrisraptis96.github.io/react-eva-icons",
   "dependencies": {
     "eva-icons": "^1.1.1",
     "grommet": "^2.2.1",
