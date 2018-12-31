@@ -5,7 +5,7 @@ import styled from 'styled-components';
 import {Tooltip} from 'react-tippy';
 import 'react-tippy/dist/tippy.css'
 
-import Icon from '../../../../src/index';
+import Icon from '../../../../../src/index';
 
 const Wrapper = styled.div`
   background: white;

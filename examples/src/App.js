@@ -2,11 +2,14 @@ import React, { Component } from "react";
 import * as eva from "eva-icons";
 import styled from "styled-components";
 
-import Cards from "./Cards/Cards";
+import Preview from "./PreviewIcons/PreviewIcons";
 import Description from "./Description/Description";
 import Header from "./Header/Header";
+import Footer from "./Footer/Footer";
 import LiveCode from "./LiveCode/LiveCode";
 import Options from "./Options/Options";
+import Usage from "./Usage/Usage";
+import GettingStarted from "./GettingStarted/GettingStarted";
 
 const ANIMATION_TYPES = {
   ZOOM: "zoom",
@@ -63,14 +66,16 @@ class App extends Component {
 
         <Body>
           <Description />
-
+          <GettingStarted />
+          <Usage />
           {/* <Options 
             handleSize={this.handleSize}
             size={size}
           /> */}
-
-          <Cards icons={icons} config={config} />
+          <Preview icons={icons} config={config} />
         </Body>
+
+        <Footer />
       </Wrapper>
     );
   }
