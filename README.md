@@ -47,7 +47,7 @@ render (
 | Option      | Type     | Values                                                   | Description                  | 
 |-------------|----------|----------------------------------------------------------|------------------------------|
 | `animation` | object   | [See here](https://github.com/akveo/eva-icons#animation) | Icon animation               |
-| `fill`      | string   | e.g. `'#fff'`                                            | Icon animation               |
+| `fill`      | string   | e.g. `'#fff'`                                            | Icon color                   |
 | `name`      | string   | e.g. `'activity'`                                        | Define the name of the icon  |
 | `size`      | string   |`small`, `medium`, `large`, ``xlarge                      | Icon size                    |
 
