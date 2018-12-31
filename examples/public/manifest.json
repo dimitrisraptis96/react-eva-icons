@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "react-eva-icons",
+  "name": "React component for Eva Icons library",
   "icons": [
     {
       "src": "favicon.ico",
