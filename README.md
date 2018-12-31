@@ -1,11 +1,27 @@
-# :heart:⚛ react-eva-icons 
+# ⚛:heart: react-eva-icons 
 
-React js components for awesome open source [Eva Icons](https://akveo.github.io/eva-icons/#/) library. :art: 
+React js components for awesome open source [Eva Icons](https://akveo.github.io/eva-icons/#/) library.
 
 ### Demo 
-Soon.. 
+Visit [here](https://dimitrisraptis96.github.io/react-eva-icons)
 
-### How to use 
+&nbsp;
+
+### Getting Started
+   
+   Using npm
+   ```
+    npm install --save react-eva-icons
+   ```
+
+   Or using yarn
+   ```
+    yarn add react-eva-icons
+   ```
+
+&nbsp;
+
+### Usage
 
 ```javascript
 import Icon from 'react-eva-icons';
@@ -14,16 +30,35 @@ import Icon from 'react-eva-icons';
 
 render (
   <Icon 
-    name='activity'
-    size='medium'    // options: 'small', 'medium', 'large', 'xlarge'
+    name="activity"
+    size="medium"
     animation={{
-      type: pulse, 
+      type: "pulse", 
       hover: true,
       infinite: false 
     }}
   />
 );
-  
 ```
+&nbsp;
 
-### More useful Info and Demo will be added soon... :v:
+### Props
+
+| Option      | Type     | Values                                                   | Description                  | 
+|-------------|----------|----------------------------------------------------------|------------------------------|
+| `animation` | object   | [See here](https://github.com/akveo/eva-icons#animation) | Icon animation               |
+| `fill`      | string   | e.g. `'#fff'`                                            | Icon animation               |
+| `name`      | string   | e.g. `'activity'`                                        | Define the name of the icon  |
+| `size`      | string   |`small`, `medium`, `large`, ``xlarge                      | Icon size                    |
+
+&nbsp;
+
+### License
+
+[MIT](https://en.wikipedia.org/wiki/MIT_License)
+
+&nbsp;
+
+<p align="center">
+<sub><sup>Made with 🤘 by <a href="https://twitter.com/d__raptis">@d__raptis</a></sup></sub>
+</p>
