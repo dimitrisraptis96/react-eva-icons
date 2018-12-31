@@ -81,13 +81,8 @@ class Icon extends Component {
 
     const dims = this.updateDims(size);
 
-    this.setupEvaIcons();
-
-    console.log('Inisde linked component');
-    
-    return(
+    const icon = (
       <i 
-        className={"icon-wrapper"}
         data-eva={name}
         data-eva-fill={fill}
         data-eva-height={dims}
@@ -95,6 +90,8 @@ class Icon extends Component {
         data-eva-animation={animation}
       />
     );
+    
+    return(icon);
   }
 }
 
