@@ -7,13 +7,8 @@ import { grommet } from "grommet/themes";
 import { deepMerge } from "grommet/utils";
 
 import Cards from "./Cards/Cards";
+import LiveCode from './LiveCode/LiveCode';
 
-import {
-  LiveProvider,
-  LiveEditor,
-  LiveError,
-  LivePreview
-} from 'react-live'
 
 const ANIMATION_TYPES = {
   ZOOM: "zoom",
@@ -126,7 +121,7 @@ class App extends Component {
             in your next awesome React JS application. 
           </Description>
 
-          <Grommet theme={grommet}>
+          {/* <Grommet theme={grommet}>
             <Box align="start">
               {["small", "medium", "large", "xlarge"].map(label => (
                 <Box key={label} margin={{ vertical: "small" }}>
@@ -139,13 +134,9 @@ class App extends Component {
                 </Box>
               ))}
             </Box>
-          </Grommet>
+          </Grommet> */}
 
-          <LiveProvider code="<strong>Hello World!</strong>">
-            <LiveEditor />
-            <LiveError />
-            <LivePreview />
-          </LiveProvider>
+          {/* <LiveCode/> */}
 
           <Cards icons={icons} config={config}/>
         </Body>
