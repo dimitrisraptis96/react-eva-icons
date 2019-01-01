@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-import GithubIcon from "../components/GithubIcon";
+import GithubIcon from "../UI/GithubIcon";
 
 const Wrapper = styled.div`
   max-width: 100%;
@@ -26,15 +26,19 @@ const Logo = styled.h2`
   align-items: center;
 `;
 
+const IconWrapper = styled.div`
+  margin-right: 2em;
+`;
+
 const Header = props => {
   return (
     <Wrapper>
       <Logo>⚛❤ react-eva-icons</Logo>
-      
-      <a target="_blank" rel="noopener noreferrer" href='https://github.com/dimitrisraptis96/react-eva-icons'>
-        <GithubIcon primaryColor="#2A2D26"/>
-      </a>
-
+      <IconWrapper>
+        <a target="_blank" rel="noopener noreferrer" href='https://github.com/dimitrisraptis96/react-eva-icons'>
+          <GithubIcon primaryColor="#2A2D26"/>
+        </a>
+      </IconWrapper>
     </Wrapper>
   );
 };

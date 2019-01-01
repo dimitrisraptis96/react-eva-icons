@@ -2,32 +2,17 @@ import React, { Component } from "react";
 import * as eva from "eva-icons";
 import styled from "styled-components";
 
-import Preview from "./PreviewIcons/PreviewIcons";
-import Description from "./Description/Description";
-import Header from "./Header/Header";
-import Footer from "./Footer/Footer";
-import LiveCode from "./LiveCode/LiveCode";
-import Options from "./Options/Options";
-import Usage from "./Usage/Usage";
-import GettingStarted from "./GettingStarted/GettingStarted";
+import Body from './components/Body/Body'
+import Header from "./components/Header/Header";
+import Footer from "./components/Footer/Footer";
 
-const ANIMATION_TYPES = {
-  ZOOM: "zoom",
-  PULSE: "pulse",
-  SHAKE: "shake",
-  FLIP: "flip"
-};
+import ANIMATION_TYPES from './constants/animationTypes';
 
 const Wrapper = styled.div`
   padding: 2em 4em;
   background-color: #f4f4f4;
 
   max-width: 100vw;
-`;
-
-const Body = styled.div`
-  max-width: 100%;
-  /* background-color: lightgoldenrodyellow; */
 `;
 
 class App extends Component {
@@ -63,18 +48,7 @@ class App extends Component {
     return (
       <Wrapper>
         <Header />
-
-        <Body>
-          <Description />
-          <GettingStarted />
-          <Usage />
-          {/* <Options 
-            handleSize={this.handleSize}
-            size={size}
-          /> */}
-          <Preview icons={icons} config={config} />
-        </Body>
-
+        <Body icons={icons} config={config}/>
         <Footer />
       </Wrapper>
     );
