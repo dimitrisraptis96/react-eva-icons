@@ -45,6 +45,8 @@ const column = css`
 
 const StyledEditor = styled(LiveEditor)`
   background: ${lightGrey};
+  margin: 0;
+  color: ${foreground};
   font-family: 'Source Code Pro', monospace;
   font-size: ${polished.rem(14)};
   height: ${polished.rem(350)};
