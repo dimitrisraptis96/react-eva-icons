@@ -9,11 +9,11 @@ import {
   LivePreview
 } from 'react-live'
 
-import Icon from '../../../../../../src/Icon';
-import { foreground, red, lightGrey } from '../../../../utils/colors';
+import Icon from '../../../../../src/Icon';
+import { foreground, red, lightGrey } from '../../../utils/colors';
 
 const Wrapper = styled.div`
-  margin: 1em;
+  margin: 2em 0;
 `;
 
 const StyledProvider = styled(LiveProvider)`
@@ -100,7 +100,7 @@ const LiveCode = (props) => (
     <StyledProvider
       code={code}
       noInline={true}
-      mountStylesheet={false}
+      mountStylesheet={true}
       scope={scope}
     >
       <LiveWrapper>
