@@ -1,5 +1,7 @@
 # ⚛:heart: react-eva-icons 
 
+[![Build Status](https://travis-ci.org/dimitrisraptis96/react-eva-icons.svg?branch=master)](https://travis-ci.org/dimitrisraptis96/react-eva-icons)
+
 React js components for awesome open source [Eva Icons](https://akveo.github.io/eva-icons/#/) library.
 
 ### Demo 
