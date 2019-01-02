@@ -5,15 +5,14 @@ cache:
   directories:
     - node_modules
 script:
-  - npm test
   - npm run publish-demo
-deploy:
-  provider: pages
-  skip-cleanup: true
-  github-token: 58fac74f517cc3c8722229e6fd29ae571ed4735b
-  keep-history: true
-  on:
-    branch: master
+# deploy:
+#   provider: pages
+#   skip-cleanup: true
+#   github-token: $GITHUB_TOKEN
+#   keep-history: true
+#   on:
+#     branch: master
 notifications:
   email:
     recipients:
