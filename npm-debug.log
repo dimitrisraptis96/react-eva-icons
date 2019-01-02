@@ -1,0 +1,112 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/home/dimitris/.nvm/versions/node/v6.10.3/bin/node',
+1 verbose cli   '/home/dimitris/.nvm/versions/node/v6.10.3/bin/npm',
+1 verbose cli   'publish' ]
+2 info using npm@3.10.10
+3 info using node@v6.10.3
+4 verbose publish [ '.' ]
+5 silly cache add args [ '.', null ]
+6 verbose cache add spec .
+7 silly cache add parsed spec Result {
+7 silly cache add   raw: '.',
+7 silly cache add   scope: null,
+7 silly cache add   escapedName: null,
+7 silly cache add   name: null,
+7 silly cache add   rawSpec: '.',
+7 silly cache add   spec: '/home/dimitris/Documents/Git/react-eva-icons/lib',
+7 silly cache add   type: 'directory' }
+8 verbose addLocalDirectory /home/dimitris/.npm/react-eva-icons/0.0.1/package.tgz not in flight; packing
+9 verbose correctMkdir /home/dimitris/.npm correctMkdir not in flight; initializing
+10 info lifecycle react-eva-icons@0.0.1~prepublish: react-eva-icons@0.0.1
+11 silly lifecycle react-eva-icons@0.0.1~prepublish: no script for prepublish, continuing
+12 verbose tar pack [ '/home/dimitris/.npm/react-eva-icons/0.0.1/package.tgz',
+12 verbose tar pack   '/home/dimitris/Documents/Git/react-eva-icons/lib' ]
+13 verbose tarball /home/dimitris/.npm/react-eva-icons/0.0.1/package.tgz
+14 verbose folder /home/dimitris/Documents/Git/react-eva-icons/lib
+15 verbose addLocalTarball adding from inside cache /home/dimitris/.npm/react-eva-icons/0.0.1/package.tgz
+16 verbose correctMkdir /home/dimitris/.npm correctMkdir not in flight; initializing
+17 silly cache afterAdd react-eva-icons@0.0.1
+18 verbose afterAdd /home/dimitris/.npm/react-eva-icons/0.0.1/package/package.json not in flight; writing
+19 verbose correctMkdir /home/dimitris/.npm correctMkdir not in flight; initializing
+20 verbose afterAdd /home/dimitris/.npm/react-eva-icons/0.0.1/package/package.json written
+21 silly publish { name: 'react-eva-icons',
+21 silly publish   version: '0.0.1',
+21 silly publish   description: 'React js components for awesome Eva Icons',
+21 silly publish   main: 'build/index.js',
+21 silly publish   peerDependencies: { react: '^16.6.3' },
+21 silly publish   dependencies: { 'eva-icons': '^1.1.1', react: '^16.6.3', webpack: '^2.6.1' },
+21 silly publish   scripts:
+21 silly publish    { test: 'echo "Error: no test specified" && exit 1',
+21 silly publish      start: 'webpack --watch',
+21 silly publish      build: 'webpack' },
+21 silly publish   author:
+21 silly publish    { name: 'Raptis Dimitrios',
+21 silly publish      email: 'dimitrisraptis96@gmail.com' },
+21 silly publish   devDependencies:
+21 silly publish    { 'babel-cli': '^6.24.1',
+21 silly publish      'babel-core': '^6.24.1',
+21 silly publish      'babel-loader': '^7.0.0',
+21 silly publish      'babel-plugin-transform-object-rest-spread': '^6.23.0',
+21 silly publish      'babel-plugin-transform-react-jsx': '^6.24.1',
+21 silly publish      'babel-preset-env': '^1.5.1' },
+21 silly publish   readme: '# :heart:⚛ react-eva-icons \n\nReact js components for awesome open source [Eva Icons](https://akveo.github.io/eva-icons/#/) library. :art: \n\n### How to use \n\n```javascript\nimport Icon from \'react-eva-icons\';\n\n...\n\nrender (\n  <Icon \n    name=\'activity\'\n    size=\'medium\'    // options: \'small\', \'medium\', \'large\', \'xlarge\'\n    animation={{\n      type: pulse, \n      hover: true,\n      infinite: false \n    }}\n  />\n);\n  \n```\n\n### More useful Info and Demo will be added soon... :v:',
+21 silly publish   readmeFilename: 'README.md',
+21 silly publish   _id: 'react-eva-icons@0.0.1',
+21 silly publish   _shasum: 'aa1eea0b015eb439c33bf670df0f4cbb6852b6e2',
+21 silly publish   _from: '.' }
+22 verbose getPublishConfig undefined
+23 silly mapToRegistry name react-eva-icons
+24 silly mapToRegistry using default registry
+25 silly mapToRegistry registry https://registry.npmjs.org/
+26 silly mapToRegistry data Result {
+26 silly mapToRegistry   raw: 'react-eva-icons',
+26 silly mapToRegistry   scope: null,
+26 silly mapToRegistry   escapedName: 'react-eva-icons',
+26 silly mapToRegistry   name: 'react-eva-icons',
+26 silly mapToRegistry   rawSpec: '',
+26 silly mapToRegistry   spec: 'latest',
+26 silly mapToRegistry   type: 'tag' }
+27 silly mapToRegistry uri https://registry.npmjs.org/react-eva-icons
+28 verbose publish registryBase https://registry.npmjs.org/
+29 silly publish uploading /home/dimitris/.npm/react-eva-icons/0.0.1/package.tgz
+30 verbose request uri https://registry.npmjs.org/react-eva-icons
+31 verbose request sending authorization for write operation
+32 info attempt registry request try #1 at 11:52:18 PM
+33 verbose request using bearer token for auth
+34 verbose request id 278aa3b5d9223cb7
+35 http request PUT https://registry.npmjs.org/react-eva-icons
+36 http 403 https://registry.npmjs.org/react-eva-icons
+37 verbose headers { date: 'Wed, 26 Dec 2018 21:52:23 GMT',
+37 verbose headers   'content-type': 'application/json',
+37 verbose headers   'transfer-encoding': 'chunked',
+37 verbose headers   connection: 'keep-alive',
+37 verbose headers   'set-cookie': [ '__cfduid=d5aafd116e7adc3844e7781b3bf149d801545861140; expires=Thu, 26-Dec-19 21:52:20 GMT; path=/; domain=.registry.npmjs.org; HttpOnly' ],
+37 verbose headers   'cf-ray': '48f6c61d388b5cb7-ATH',
+37 verbose headers   'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+37 verbose headers   vary: 'Accept-Encoding',
+37 verbose headers   server: 'cloudflare',
+37 verbose headers   'content-encoding': 'gzip' }
+38 verbose request invalidating /home/dimitris/.npm/registry.npmjs.org/react-eva-icons on PUT
+39 error publish Failed PUT 403
+40 verbose stack Error: You cannot publish over the previously published versions: 0.0.1. : react-eva-icons
+40 verbose stack     at makeError (/home/dimitris/.nvm/versions/node/v6.10.3/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:302:12)
+40 verbose stack     at CachingRegistryClient.<anonymous> (/home/dimitris/.nvm/versions/node/v6.10.3/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:290:14)
+40 verbose stack     at /home/dimitris/.nvm/versions/node/v6.10.3/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:216:7
+40 verbose stack     at Gunzip.onEnd (zlib.js:227:5)
+40 verbose stack     at emitNone (events.js:91:20)
+40 verbose stack     at Gunzip.emit (events.js:185:7)
+40 verbose stack     at endReadableNT (_stream_readable.js:974:12)
+40 verbose stack     at _combinedTickCallback (internal/process/next_tick.js:80:11)
+40 verbose stack     at process._tickCallback (internal/process/next_tick.js:104:9)
+41 verbose statusCode 403
+42 verbose pkgid react-eva-icons
+43 verbose cwd /home/dimitris/Documents/Git/react-eva-icons/lib
+44 error Linux 4.15.0-43-generic
+45 error argv "/home/dimitris/.nvm/versions/node/v6.10.3/bin/node" "/home/dimitris/.nvm/versions/node/v6.10.3/bin/npm" "publish"
+46 error node v6.10.3
+47 error npm  v3.10.10
+48 error code E403
+49 error You cannot publish over the previously published versions: 0.0.1. : react-eva-icons
+50 error If you need help, you may report this error at:
+50 error     <https://github.com/npm/npm/issues>
+51 verbose exit [ 1, true ]
