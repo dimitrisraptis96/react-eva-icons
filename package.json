@@ -22,6 +22,7 @@
     "eva-icons": "^1.1.1"
   },
   "scripts": {
+    "install-demo": "cd ./examples && npm install && cd ..",
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "webpack-dev-server --mode development",
     "transpile": "babel src -d dist --copy-files",
