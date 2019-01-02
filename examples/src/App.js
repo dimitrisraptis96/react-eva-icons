@@ -27,7 +27,8 @@ class App extends Component {
 
   componentWillMount() {
     const icons = Object.keys(eva.icons);
-    this.setState({ icons });
+    const newIcons = icons.map(icon => ({name: icon}));
+    this.setState({ icons: newIcons });
   }
 
   handleSize = (size) => this.setState({size});

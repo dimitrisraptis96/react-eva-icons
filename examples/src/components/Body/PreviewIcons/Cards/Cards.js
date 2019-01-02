@@ -26,10 +26,10 @@ const Cards = ({
 
   return (
     <Wrapper>
-      {icons.map((name, index) => (
+      {icons.map((icon, index) => (
           <Card 
             config={config} 
-            name={name} 
+            name={icon.name} 
             key={index}  
           />
         ))}

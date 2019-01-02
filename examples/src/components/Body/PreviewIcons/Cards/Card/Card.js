@@ -31,6 +31,17 @@ const Card = ({
     animation,
   } = config;  
 
+  console.log('render Card');
+
+  const icon = (
+    <Icon
+      animation={animation}
+      fill={fill}
+      name={name}
+      size={size}
+    />
+  );
+  
   return (
     <Wrapper>
       <Tooltip
@@ -39,12 +50,7 @@ const Card = ({
         position="bottom"
         trigger="mouseenter"
       >
-        <Icon
-          animation={animation}
-          fill={fill}
-          name={name}
-          size={size}
-        />
+        {icon}
       </Tooltip>
     </Wrapper>
   );

@@ -75,8 +75,7 @@ const StyledError = styled(LiveError)`
 `
 
 const scope = {Icon};
-
-const code = `
+const code = (`
   const animation = {
     type: "pulse",
     hover: true,
@@ -92,8 +91,8 @@ const code = `
     />
   );
 
-  render (ActivityIcon);
-`;
+  render(ActivityIcon);
+`).trim();
 
 const LiveCode = (props) => (
   <Wrapper>
@@ -106,9 +105,9 @@ const LiveCode = (props) => (
       <LiveWrapper>
         <StyledEditor />
         <StyledPreview />
-        <StyledError />
       </LiveWrapper>
 
+      <StyledError />
     </StyledProvider>
   </Wrapper>
 );

@@ -36,6 +36,10 @@ class Icon extends Component {
     this.setupEvaIcons();
   }
 
+  componentDidUpdate() {
+    this.setupEvaIcons();
+  }
+
   setupEvaIcons() {
     const {
       fill,
@@ -51,7 +55,6 @@ class Icon extends Component {
       height: dims,
       animation,
     };
-    
 
     eva.replace(config);
   }

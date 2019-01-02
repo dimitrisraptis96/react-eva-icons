@@ -30,7 +30,8 @@ const Description = (props) => {
         as ReactJS components in your next awesome project. 
       </TextWrapper>      
 
-      <LiveCode/>
+      {/* TODO: Make that fucking code work */}
+      {/* <LiveCode/> */}
     </Wrapper>
   );
 };
