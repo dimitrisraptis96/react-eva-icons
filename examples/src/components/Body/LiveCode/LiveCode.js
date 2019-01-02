@@ -10,7 +10,7 @@ import {
 } from 'react-live'
 
 import Icon from '../../../../../src/Icon';
-import { foreground, red, lightGrey } from '../../../utils/colors';
+import { foreground, red, lightGrey, blue } from '../../../utils/colors';
 
 const Wrapper = styled.div`
   margin: 2em 0;
@@ -85,7 +85,7 @@ const code = (`
   const ActivityIcon = (
     <Icon 
       animation={animation}
-      fill="#36f"
+      fill="${blue}"
       name="activity"
       size="large"
     />

@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 import GithubIcon from "../UI/GithubIcon";
+import {blue, dark} from "../../utils/colors";
 
 const Wrapper = styled.div`
   max-width: 100%;
@@ -16,7 +17,7 @@ const Wrapper = styled.div`
 
 const Logo = styled.h2`
   font-size: 2em;
-  color: #263238;
+  color: ${dark};
   margin: 1em;
 
   display: flex;
@@ -25,7 +26,7 @@ const Logo = styled.h2`
 `;
 
 const Blue = styled.span`
-  color: #36f;
+  color: ${blue};
 `;
 
 const IconWrapper = styled.div`
@@ -42,7 +43,7 @@ const Header = props => {
       </Logo>
       <IconWrapper>
         <a target="_blank" rel="noopener noreferrer" href='https://github.com/dimitrisraptis96/react-eva-icons'>
-          <GithubIcon primaryColor="#2A2D26"/>
+          <GithubIcon primaryColor={dark}/>
         </a>
       </IconWrapper>
     </Wrapper>

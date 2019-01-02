@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import FlatSVG from "../../UI/FlatSVG";
 import LiveCode from '../LiveCode/LiveCode'
+import {dark} from "../../../utils/colors";
 
 const Wrapper = styled.p`
   margin: 1em 3em 2em 3em;
@@ -11,7 +12,7 @@ const TextWrapper = styled.div`
   font-family: "Montserrat", sans-serif;
   font-size: 1em;
   font-weight: bold;
-  color: #262626;
+  color: ${dark};
   text-align: center;
   max-width: 100%;
 `;

@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { dark } from "../../utils/colors";
 
 const Wrapper = styled.div`
   max-width: 100%;
@@ -15,7 +16,7 @@ const Wrapper = styled.div`
 const Sup = styled.sup`
   font-family: "Montserrat", sans-serif;
   font-size: 0.75em;
-  color: #262626;
+  color: ${dark};
 `;
 
 const Footer = (props) => {

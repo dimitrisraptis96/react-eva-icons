@@ -29,7 +29,7 @@ const Cards = ({
       {icons.map((icon, index) => (
           <Card 
             config={config} 
-            name={icon.name} 
+            name={icon.name}  
             key={index}  
           />
         ))}

@@ -7,10 +7,11 @@ import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 
 import ANIMATION_TYPES from './constants/animationTypes';
+import {blue, light} from './utils/colors';
 
 const Wrapper = styled.div`
   padding: 2em 4em;
-  background-color: #f4f4f4;
+  background-color: ${light};
 
   max-width: 100vw;
 `;
@@ -37,7 +38,7 @@ class App extends Component {
     const { icons, size } = this.state;
 
     const config = {
-      fill: "#36f",
+      fill: blue,
       size,
       animation: {
         type: ANIMATION_TYPES.PULSE,
