@@ -15,23 +15,6 @@ const SIZE = {
 
 class Icon extends Component {
 
-  constructor(props){
-    super();
-    const {
-      fill,
-      animation,
-      name,
-      size,
-    } = props;
-
-    this.state = {
-      animation,
-      size,
-      fill,
-      name,
-    }
-  }
-
   componentDidMount() {
     this.setupEvaIcons();
   }
@@ -90,7 +73,6 @@ class Icon extends Component {
         data-eva-fill={fill}
         data-eva-height={dims}
         data-eva-width={dims}
-        data-eva-animation={animation}
       />
     );
     
