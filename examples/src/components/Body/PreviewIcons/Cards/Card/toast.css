@@ -1,0 +1,13 @@
+.black-background {
+  background-color: #262821;
+  color: white;
+  border-radius: 16px;
+}
+.grow-font-size {
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+}
+.progressClassName {
+  display: none;
+}
