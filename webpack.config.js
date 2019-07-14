@@ -1,14 +1,14 @@
-var path = require('path');
+var path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const htmlWebpackPlugin = new HtmlWebpackPlugin({
-    template: path.join(__dirname, "examples/public/index.html"),
-    filename: "./index.html"
+  template: path.join(__dirname, "examples/public/index.html"),
+  filename: "./index.html",
 });
 module.exports = {
-  entry:  path.join(__dirname, "examples/src/index.js"),
+  entry: path.join(__dirname, "examples/src/index.js"),
   output: {
     path: path.join(__dirname, "examples/dist"),
-    filename: "bundle.js"
+    filename: "bundle.js",
   },
   module: {
     rules: [
@@ -19,15 +19,15 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        use: ["style-loader", "css-loader"]
+        use: ["style-loader", "css-loader"],
       },
-    ]
+    ],
   },
   plugins: [htmlWebpackPlugin],
   resolve: {
-      extensions: [".js", ".jsx"]
+    extensions: [".js", ".jsx"],
   },
   devServer: {
-    port: 3001
-  }
+    port: 3001,
+  },
 };
