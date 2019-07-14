@@ -1,5 +1,5 @@
-import React from 'react';
-import styled from 'styled-components';
+import React from "react";
+import styled from "styled-components";
 
 import Header from "../../UI/Header";
 import PreviewJS from "../../UI/PreviewJS";
@@ -28,10 +28,9 @@ const USAGE_CODE = `
 
 const Usage = (props) => {
   return (
-
     <Wrapper>
       <Header> Usage </Header>
-      <PreviewJS code={USAGE_CODE}/>
+      <PreviewJS code={USAGE_CODE} />
     </Wrapper>
   );
 };

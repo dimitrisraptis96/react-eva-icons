@@ -2,12 +2,12 @@ import React, { Component } from "react";
 import * as eva from "eva-icons";
 import styled from "styled-components";
 
-import Body from './components/Body/Body'
+import Body from "./components/Body/Body";
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 
-import ANIMATION_TYPES from './constants/animationTypes';
-import {blue, light} from './utils/colors';
+import ANIMATION_TYPES from "./constants/animationTypes";
+import { blue, light } from "./utils/colors";
 
 const Wrapper = styled.div`
   padding: 2em 4em;
@@ -22,17 +22,17 @@ class App extends Component {
 
     this.state = {
       icons: [],
-      size: "medium"
+      size: "large",
     };
   }
 
   componentWillMount() {
     const icons = Object.keys(eva.icons);
-    const newIcons = icons.map(icon => ({name: icon}));
+    const newIcons = icons.map((icon) => ({ name: icon }));
     this.setState({ icons: newIcons });
   }
 
-  handleSize = (size) => this.setState({size});
+  handleSize = (size) => this.setState({ size });
 
   render() {
     const { icons, size } = this.state;
@@ -41,16 +41,16 @@ class App extends Component {
       fill: blue,
       size,
       animation: {
-        type: ANIMATION_TYPES.PULSE,
+        type: ANIMATION_TYPES.SHAKE,
         hover: true,
-        infinite: false
-      }
+        infinite: false,
+      },
     };
 
     return (
       <Wrapper>
         <Header />
-        <Body icons={icons} config={config}/>
+        <Body icons={icons} config={config} />
         <Footer />
       </Wrapper>
     );

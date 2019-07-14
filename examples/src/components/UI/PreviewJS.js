@@ -1,21 +1,20 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import styled from 'styled-components';
+import React from "react";
+import PropTypes from "prop-types";
+import styled from "styled-components";
 
-import "../../styles/prism.css"
+import "../../styles/prism.css";
 
 const Wrapper = styled.div`
-  box-shadow: 1px 1px 20px rgba(20, 20, 20, 0.27);
+  box-shadow: 0 20px 24px -18px rgba(0, 0, 0, 0.31);
   margin: 1em;
+  border-radius: 8px;
 `;
 
-const PreviewJS = ({code}) => {
+const PreviewJS = ({ code }) => {
   return (
     <Wrapper>
-      <pre>
-        <code className="language-javascript">
-          {code}
-        </code>
+      <pre className="language-javascript">
+        <code className="language-javascript">{code}</code>
       </pre>
     </Wrapper>
   );
@@ -26,7 +25,7 @@ PreviewJS.propTypes = {
 };
 
 PreviewJS.defaultProps = {
-  code: '',
+  code: "",
 };
 
-export default PreviewJS; 
+export default PreviewJS;
