@@ -2,6 +2,9 @@ import React, { Component } from "react";
 import * as eva from "eva-icons";
 import styled from "styled-components";
 
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.min.css";
+
 import Body from "./components/Body/Body";
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
@@ -52,6 +55,7 @@ class App extends Component {
         <Header />
         <Body icons={icons} config={config} />
         <Footer />
+        <ToastContainer autoClose={2000} hideProgressBar closeButton={false} />
       </Wrapper>
     );
   }
