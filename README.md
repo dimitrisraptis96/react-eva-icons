@@ -66,7 +66,7 @@ if (typeof window !== "undefined") {
 }
 ```
 
-Issue and solution by @taniotanio7 [here](https://github.com/dimitrisraptis96/react-eva-icons/issues/4)
+Issue and solution by [@taniotanio7](https://github.com/taniotanio7) [here](https://github.com/dimitrisraptis96/react-eva-icons/issues/4)
 
 &nbsp;
 
