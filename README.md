@@ -55,6 +55,21 @@ render (
 
 &nbsp;
 
+### Known Issues
+
+When using **Gatsby** and **server-side** rendering, you should dynamic import the library: 
+
+```javascript
+let Icon
+if (typeof window !== "undefined") {
+  import("react-eva-icons").then(module => Icon = module.default);
+}
+```
+
+Issue and solution by @taniotanio7 [here](https://github.com/dimitrisraptis96/react-eva-icons/issues/4)
+
+&nbsp;
+
 ### License
 
 [MIT](https://en.wikipedia.org/wiki/MIT_License)
